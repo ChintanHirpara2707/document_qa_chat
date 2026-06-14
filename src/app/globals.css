@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef2f7;
+  --foreground: #2d3748;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Custom Neumorphism Utilities */
+
+/* 1. Outset (Raised) Shadows */
+.shadow-neumo-outset {
+  box-shadow: 8px 8px 16px #c8d0e7, -8px -8px 16px #ffffff;
+}
+
+.shadow-neumo-outset-sm {
+  box-shadow: 4px 4px 8px #c8d0e7, -4px -4px 8px #ffffff;
+}
+
+.shadow-neumo-outset-lg {
+  box-shadow: 12px 12px 24px #c8d0e7, -12px -12px 24px #ffffff;
+}
+
+/* 2. Inset (Sunken) Shadows */
+.shadow-neumo-inset {
+  box-shadow: inset 6px 6px 12px #c8d0e7, inset -6px -6px 12px #ffffff;
+}
+
+.shadow-neumo-inset-sm {
+  box-shadow: inset 3px 3px 6px #c8d0e7, inset -3px -3px 6px #ffffff;
+}
+
+/* 3. Accent Inset (Sunken bubble with soft purple/indigo tint) */
+.shadow-neumo-user-inset {
+  box-shadow: inset 4px 4px 8px #b8b5db, inset -4px -4px 8px #ffffff;
+}
+
+/* Scrollbar styling matching the Neumorphic tone */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+  border: 1px solid #eef2f7;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom fade in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
