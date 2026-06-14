@@ -169,26 +169,6 @@ Accepts the full PDF text and conversation history, returns an AI response from 
 | `First content should be with role 'user'` | Gemini API rejects chat history starting with an `assistant` message | Slice history from the first `user` message before sending to Gemini |
 | React hydration mismatch | Browser extensions inject attributes into `<body>` before React hydrates | Added `suppressHydrationWarning` to the root `<html>` element |
 | Gemini model 404 error | API key lacks access to legacy `gemini-1.5-flash` | Updated model to `gemini-2.5-flash` |
-
----
-
-## 🚢 Deployment
-
-### Deploy on Vercel (Recommended)
-
-1. Push your repository to GitHub.
-2. Import the project at [vercel.com/new](https://vercel.com/new).
-3. Add the `GEMINI_API_KEY` environment variable in the Vercel dashboard under **Settings → Environment Variables**.
-4. Click **Deploy**.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 ## 🙌 Acknowledgements
